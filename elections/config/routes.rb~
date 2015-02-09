@@ -1,10 +1,13 @@
 Elections::Application.routes.draw do
  
+  devise_for :useers
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
   resources :roles
   resources :useers
+	get 'useers/:id/change_role' => 'useers#change_role', :as => :useers_change
 #MAg
   resource :user_session, :only => [:new, :create, :destroy]
 

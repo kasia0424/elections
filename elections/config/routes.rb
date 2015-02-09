@@ -8,7 +8,7 @@ Elections::Application.routes.draw do
   resources :roles
   resources :useers
 	get 'useers/:id/change_role' => 'useers#change_role', :as => :useers_change
-#MAg
+#
   resource :user_session, :only => [:new, :create, :destroy]
 
 
@@ -37,7 +37,7 @@ Elections::Application.routes.draw do
 
   root :to => 'voivodeships#index'
 
-#od Magdy
+#
   get 'login' => 'user_sessions#new', :as => :login
   get 'logout' => 'user_sessions#destroy', :as => :logout
 
