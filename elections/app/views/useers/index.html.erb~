@@ -1,0 +1,28 @@
+<h1>Listing useers</h1>
+
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Constituency</th>
+    <th>Role</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @useers.each do |useer| %>
+  <tr>
+    <td><%= useer.email %></td>
+    <td><%= useer.constituency %></td>
+    <td><%= useer.role %></td>
+    <td><%#= link_to 'Show', useer %></td>
+	    <td><%= link_to 'Edit', useers_change_path(useer) %></td>
+    <td><%#= link_to 'Edit', edit_useer_path(useer) %></td>
+    <td><%#= link_to 'Destroy', useer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%#= link_to 'New Useer', new_useer_path %>

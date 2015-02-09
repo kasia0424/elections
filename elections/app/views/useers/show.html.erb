@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Email:</b>
+  <%= @useer.email %>
+</p>
+
+<p>
+  <b>Encrypted password:</b>
+  <%= @useer.encrypted_password %>
+</p>
+
+<p>
+  <b>Constituency:</b>
+  <%= @useer.constituency %>
+</p>
+
+<p>
+  <b>Role:</b>
+  <%= @useer.role %>
+</p>
+
+
+<%= link_to 'Edit', edit_useer_path(@useer) %> |
+<%= link_to 'Back', useers_path %>

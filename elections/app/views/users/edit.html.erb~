@@ -1,0 +1,27 @@
+<p>
+Edit your data
+</p>
+<%= form_for @user do |f| %>
+<!-- kod wyświetlający błędy -->
+<p>
+	<%#= f.label :name %> <br />
+	<%#= f.text_field :name %>
+</p>
+<p>
+	<%= f.label :email %> <br />
+	<%= f.text_field :email %>
+</p>
+<div class="field">
+	  <%= f.label :password %><br>
+	  <%= f.password_field :password, placeholder: "Leave blank if unchanged" %>
+</div>
+<p>
+	<%= f.label :password_confirmation %> <br />
+	<%= f.password_field :password_confirmation %>
+</p>
+<p>
+	<%= f.label :role_id %> <br />
+	<%= collection_select(:user, :role_id, Role.all, :id, :name, {prompt: true}) %>
+</p>
+<p><%= f.submit "Submit" %> </p>
+<% end %>

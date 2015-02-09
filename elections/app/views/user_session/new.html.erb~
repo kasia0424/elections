@@ -1,0 +1,13 @@
+<h1>UserSession#new</h1>
+<%= form_for @user_session do |f| %>
+<!-- komunikaty błędów -->
+<p>
+<%= f.label :login %> <br />
+<%= f.text_field :login %>
+</p>
+<p>
+<%= f.label :password %> <br />
+<%= f.password_field :password %>
+</p>
+<p><%= f.submit "Submit" %> </p>
+<% end %>
